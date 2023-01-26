@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title="Price Trends", layout="wide", page_icon="📈")
 
 def get_data_and_Clean():
-    data = pd.read_csv("D:\HoneyTea\HoneyTea_Price_analysis_1.csv", encoding='unicode_escape', index_col=0)
+    data = pd.read_csv("HoneyTea_Price_analysis_1.csv", encoding='unicode_escape', index_col=0)
     data = data[data.columns.drop(list(data.filter(regex='Unnamed')))]
     new_prices = data['prices of items on Amazon'].apply(lambda x: x.replace("Â",""))
     data['prices of items on Amazon'] = new_prices
