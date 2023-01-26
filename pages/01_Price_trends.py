@@ -125,7 +125,7 @@ def test(
                     columns_to_plot = df.columns.tolist()
                 except:
                     st.error("Cannot view chart with a blank selection")
-                    st.stop()
+                 
                 # if st.session_state[find_the_session_state] == []:
                 #     st.error("Cannot have a blank selection")
                 else:
@@ -207,7 +207,7 @@ def test(
                     columns_to_plot = df.columns.tolist()
                 except:
                     st.error("Cannot view chart with a blank selection")
-                    st.stop()
+                   
                 else:
                     st.multiselect(label="Plot", options=columns_to_plot, default=columns_to_plot[0], key=chart_column_2_plot)
                     st.radio("Chart type", options=["line", "bar"] , horizontal=True, key=chart_type_session_state_2)
