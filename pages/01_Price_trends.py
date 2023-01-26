@@ -2,7 +2,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-st.set_page_config(page_title="Price Trends", layout="wide", page_icon="📈")
+st.set_page_config(page_title="Price Trends", layout="wide")
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 def get_data_and_Clean():
     data = pd.read_csv("HoneyTea_Price_analysis_1.csv", encoding='unicode_escape', index_col=0)
